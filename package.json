@@ -1,0 +1,29 @@
+{
+  "name": "agenty",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agenty/agenty.git"
+  },
+  "keywords": [
+    "web scraping",
+    "data scraping",
+    "url scraping"
+  ],
+  "author": "https://github.com/vickyRathee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Agenty/agenty/issues"
+  },
+  "homepage": "https://agenty.com/",
+  "dependencies": {
+    "axios": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.3"
+  }
+}
