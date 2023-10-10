@@ -1,31 +1,20 @@
-import axios, { AxiosRequestConfig } from "axios";
+import Api from "./Api";
+import Jobs from "./Jobs";
+import { Lists, ListRows } from "./Lists";
+
 
 class Agenty {
-  private apiKey: string;
-  private apiUrl: string;
-  private browserApiUrl: string;
-  private _headers: AxiosRequestConfig;
+
+  private api: Api;
+  public jobs: Jobs;
+  public lists: Lists;
+  public listRows: ListRows;
 
   constructor(apiKey: string) {
-    this.apiKey = apiKey;
-    this.apiUrl = "https://api.agenty.com/v2";
-    this.browserApiUrl = "https://browser.agenty.com/api/screenshot";
-  }
-
-  async captureScreenshot(url: string) {
-    return await axios.post(
-      this.browserApiUrl,
-      {
-        url: url,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "X-Agenty-ApiKey": this.apiKey,
-        },
-        responseType: "arraybuffer",
-      }
-    );
+    this.api = new Api(apiKey);
+    this.jobs = new Jobs(this.api);
+    this.lists = new Lists(this.api);
+    this.listRows = new ListRows(this.api);
   }
 }
 

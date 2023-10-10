@@ -10,6 +10,12 @@
 *.userosscache
 *.sln.docstates
 
+# dotenv environment variables file
+.env
+
+#test file
+test.ts
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -348,6 +354,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/test-results/
+/playwright-report/
+/playwright/.cache/
 /test-results/
 /playwright-report/
 /playwright/.cache/
