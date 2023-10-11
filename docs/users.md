@@ -17,6 +17,7 @@
 | email* | string | E-mail of your user                                           |
 | role*  | enum   | Select one of them(Owner, Admin, Manager, Accountant, Viewer) |
 
+[For complete reference click here](https://agenty.com/docs/api#tag/Users/operation/UserController_createUser)
 **Response:**
 ```json
 {
@@ -107,6 +108,7 @@
 | -------- | ------ | ---------------------- |
 | user_id* | number | To update a user by Id |
 
+[For complete reference click here](https://agenty.com/docs/api#tag/Users/operation/UserController_updateUserById)
 **Response:**
 ```json
 {

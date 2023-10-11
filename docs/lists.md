@@ -14,6 +14,7 @@
 | name*       | string | Name of your list        |
 | description | string | Description of your list |
 
+[For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListController_createList)
 **Response:**
 ```json
 { 
@@ -98,7 +99,7 @@
 | name*       | string | Name of your list        |
 | description | string | Description of your list |
 
-
+[For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListController_updateList)
 **Response:**
 ```json
 { 

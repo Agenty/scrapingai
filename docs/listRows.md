@@ -28,6 +28,7 @@
 | field1 | any  | Field name must be same as existiing field |
 | field2 | any  | Field name must be same as existiing field |
 
+[For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListRowsController_addRow)
 **Response:**
 ```json
     [
@@ -128,6 +129,7 @@
 | ------- | ---- | -------------------- |
 | field1* | any  | Update the row value |
 
+[For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListRowsController_updateListRowById)
 **Response:**
 ```json
 {
