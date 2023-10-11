@@ -24,6 +24,10 @@ class Jobs {
     return this.api.get(`/jobs/${job_id}`);
   }
 
+  async result(job_id: number): Promise<any[]> {
+    return this.api.get(`/jobs/${job_id}/result`);
+  }
+
 }
 
 export default Jobs;

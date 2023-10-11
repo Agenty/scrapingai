@@ -34,9 +34,9 @@
 
 **Parameter:**
 
-| Name          | Type        | Description                                 |
-|---------------|-------------|---------------------------------------------|
-| job_id*       | number      | ID of an agent job                          |
+| Name          | Type        | Description           |
+|---------------|-------------|-----------------------|
+| job_id*       | number      | ID of an agent job    |
 
 
 **Response:**
@@ -73,7 +73,11 @@
 
 **Response:**
 ```json
-[
+{   "total": 229,
+    "limit": 1000,
+    "offset": 0,
+    "returned": 229,
+    "result":[
     {
       "job_id": 19418,
       "account_id": 001,
@@ -96,35 +100,20 @@
       "error": null,
       "ping_at": null
     },
-     {
-      "job_id": 19419,
-      "account_id": 001,
-      "agent_id": "7hy654rfgt",
-      "type": "scraping",
-      "status": "completed",
-      "priority": 2,
-      "pages_total": 1,
-      "pages_processed": 1,
-      "pages_succeeded": 1,
-      "pages_failed": 0,
-      "pages_credit": 0,
-      "created_at": "2023-09-20T09:44:54.000Z",
-      "started_at": "2023-09-20T10:23:24.000Z",
-      "completed_at": "2023-09-10T:23:30.000Z",
-      "stopped_at": null,
-      "is_scheduled": 0,
-      "queue_time": "00:00:00",
-      "run_duration": "00:00:10",
-      "error": null,
-      "ping_at": null
-    }
-]
+    ...
+    ]
+}
 ```
 
-### Get job by id
+### Get job by job_id
 ```js
     agenty.jobs.get(19418)
 ```
+**Parameter:**
+
+| Name          | Type        | Description           |
+|---------------|-------------|-----------------------|
+| job_id*       | number      | ID of an agent job    |
 
 **Response:**
 ```json
@@ -151,4 +140,37 @@
     "error": null,
     "ping_at": null
     }
+```
+
+### Get job result by job_id
+```js
+    agenty.jobs.result(19541)
+```
+**Parameter:**
+
+| Name          | Type        | Description           |
+|---------------|-------------|-----------------------|
+| job_id*       | number      | ID of an agent job    |
+
+**Response:**
+```json
+{
+  "total": 10,
+  "limit": 1000,
+  "offset": 0,
+  "returned": 10,
+  "result": [
+    {
+      "url": "https://books.toscrape.com/",
+      "title": "A Light in the ...",
+      "price": "£51.77"
+    },
+    {
+      "url": "https://books.toscrape.com/",
+      "title": "Tipping the Velvet",
+      "price": "£53.74"
+    },
+    ...
+  ]
+}
 ```
