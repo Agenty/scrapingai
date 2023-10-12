@@ -19,11 +19,15 @@ class Workflows {
     }
 
     async update(workflow_id: string, data: any): Promise<any> {
-        return this.api.get(`/workflows/${workflow_id}`, data);
+        return this.api.put(`/workflows/${workflow_id}`, data);
+    }
+
+    async isEnabled(workflow_id: string, data: any): Promise<any> {
+        return this.api.patch(`/workflows/${workflow_id}`, data);
     }
 
     async delete(workflow_id: string): Promise<any> {
-        return this.api.get(`/workflows/${workflow_id}`);
+        return this.api.delete(`/workflows/${workflow_id}`);
     }
 }
 

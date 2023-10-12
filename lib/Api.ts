@@ -38,6 +38,16 @@ class Api {
         return response.data;
     }
 
+    async patch(url: string, data: any, params?: any): Promise<any> {
+        const response = await axios.patch(`${this.baseUrl}${url}`, data, {
+            params: {
+                apiKey: this.apiKey,
+                ...params,
+            },
+        });
+        return response.data;
+    }
+
     async delete(url: string, params?: any): Promise<string> {
         const response = await axios.delete(`${this.baseUrl}${url}`, {
             params: {
@@ -47,6 +57,7 @@ class Api {
         });
         return response.data;
     }
+
 }
 
 export default Api;
