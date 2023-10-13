@@ -1,4 +1,4 @@
-// import ScrapingAgents from "./Agents";
+import { ChangeDetectionAgents, CrawlingAgents, ScrapingAgents } from "./Agents";
 import Api from "./Api";
 import Jobs from "./Jobs";
 import { Lists, ListRows } from "./Lists";
@@ -16,7 +16,9 @@ class Agenty {
   public users: Users;
   public workflows: Workflows;
   public scheduler: Scheduler;
-  // public scrapingAgents: ScrapingAgents;
+  public scrapingAgents: ScrapingAgents;
+  public crawlingAgents: CrawlingAgents;
+  public changeDetectionAgents: ChangeDetectionAgents;
 
   constructor(apiKey: string) {
     this.api = new Api(apiKey);
@@ -26,7 +28,9 @@ class Agenty {
     this.users = new Users(this.api);
     this.workflows = new Workflows(this.api);
     this.scheduler = new Scheduler(this.api);
-    // this.scrapingAgents = new ScrapingAgents(this.api);
+    this.scrapingAgents = new ScrapingAgents(this.api);
+    this.crawlingAgents = new CrawlingAgents(this.api);
+    this.changeDetectionAgents = new ChangeDetectionAgents(this.api);
   }
 }
 
