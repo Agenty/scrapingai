@@ -46,7 +46,7 @@
 | Name    | Type    | Description                                              |
 | ------- | ------- | -------------------------------------------------------- |
 | name*   | string  | Name of your agent                                       |
-| type*   | enum    | Select one of them(Scraping, Crawling, Change Detection) |
+| type*   | enum    | Select one of them(scraping, crawling, Change Detection) |
 | config* | Objects | Describe selectors and fields                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_createAgent)
@@ -113,11 +113,11 @@
 **Response:**
 ```json
 {
-  "agent_id": "ru7xvi4dn1",
+  "agent_id": "7edonede87",
   "account_id": 001,
   "user_id": 002,
   "project_id": null,
-  "name": "Scraping Agent Demo Update",
+  "name": "Scraping Agent Demo",
   "description": null,
   "type": "scraping",
   "tags": [],
@@ -186,7 +186,7 @@
 | Name    | Type    | Description                                              |
 | ------- | ------- | -------------------------------------------------------- |
 | name*   | string  | Name of your agent                                       |
-| type*   | enum    | Select one of them(Scraping, Crawling, Change Detection) |
+| type*   | enum    | Select one of them(scraping, crawling, Change Detection) |
 | config* | Objects | Describe selectors and fields                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_updateAgent)
@@ -240,7 +240,7 @@
 }
 ```
 
-### Delete workflow by workflow_id
+### Delete an agent by agent_id
 ```js
     agenty.scrapingAgents.delete("7edonede87")
 ```
@@ -249,7 +249,7 @@
 
 | Name      | Type   | Description                     |
 | --------- | ------ | ------------------------------- |
-| agent_id* | number | To delete the agent by agent_id |
+| agent_id* | string | To delete the agent by agent_id |
 
 
 **Response:**
