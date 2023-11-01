@@ -1,5 +1,6 @@
-import { Paged } from "../models/paged";
-import Api from "./Api";
+import { Paged } from "../../models/paged";
+import Api from "../api";
+import { List } from "./types";
 
 class Lists {
     private api: Api
@@ -8,19 +9,19 @@ class Lists {
         this.api = api;
     }
 
-    async list(paged?: Paged): Promise<any[]> {
+    async list(paged?: Paged): Promise<List[]> {
         return this.api.get(`/lists`, paged);
     }
 
-    async get(list_id: number): Promise<any> {
+    async get(list_id: number): Promise<List> {
         return this.api.get(`/lists/${list_id}`)
     }
 
-    async create(data: any): Promise<any> {
+    async create(data: List): Promise<List> {
         return this.api.post(`/lists`, data);
     }
 
-    async update(list_id: number, data: any) {
+    async update(list_id: number, data: List) {
         return this.api.put(`/lists/${list_id}`, data);
     }
 

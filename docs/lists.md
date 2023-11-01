@@ -2,7 +2,7 @@
 
 ### Create a list
 ```js
-    agenty.list.create({
+    agenty.lists.create({
         name:"List-01",
         description: "Your description"
     })
@@ -32,30 +32,36 @@
 
 **Response:**
 ```json
-[
+{
+  "total": 8,
+  "limit": 1000,
+  "offset": 0,
+  "returned": 8,
+  "result": [
     {
-      "list_id": 1,
+      "list_id": 53,
       "account_id": 001,
-      "name": "list-01",
-      "description": null,
+      "name": "List-1",
+      "description": "This is my list one",
       "created_at": "2023-06-15T09:29:18.000Z",
-      "updated_at": "2023-06-15T09:29:46.000Z"
+      "updated_at": "2023-10-18T05:39:55.000Z"
     },
     {
-      "list_id": 2,
+      "list_id": 54,
       "account_id": 001,
-      "name": "list-02",
+      "name": "List-2",
       "description": null,
       "created_at": "2023-06-15T09:32:15.000Z",
       "updated_at": null
     },
     ...
-]
+    ]  
+}
 ```
 
 ### Get list by list_id
 ```js
-    agenty.list.get(1)
+    agenty.lists.get(1)
 ```
 
 **Parameter:**
@@ -80,7 +86,7 @@
 
 ### Update list by list_id
 ```js
-    agenty.list.update(1, {
+    agenty.lists.update(1, {
         name: "List-01 Update"
     })
 ```
@@ -109,7 +115,7 @@
 
 ### Delete list by list_id
 ```js
-    agenty.list.delete(1)
+    agenty.lists.delete(1)
 ```
 
 **Parameter:**
