@@ -1,8 +1,8 @@
-## Scheduler
+## Schedulers
 
 ### Create a Scheduler
 ```js
-    agenty.scheduler.create("7hy654rfgt", {
+    agenty.schedulers.create(agent_id, {
     "type": "cron",
     "expression": "0 20 * * MON,WED,FRI",
     "frequency": 0,
@@ -20,6 +20,7 @@
 
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Scheduler/operation/SchedulerController_createAgentSchedule)
+
 **Response:**
 ```json
 {
@@ -36,7 +37,7 @@
 
 ### Get scheduled agent
 ```js
-    agenty.scheduler.get("7hy654rfgt")
+    agenty.schedulers.get(agent_id)
 ```
 **Parameter:**
 
@@ -60,7 +61,7 @@
 
 ### Enable or disable an agent schedule
 ```js
-    agenty.scheduler.isEnabled("7hy654rfgt", {
+    agenty.schedulers.isEnabled(agent_id, {
         "is_enabled": true,
 })
 ```
@@ -87,7 +88,7 @@
 
 ### Delete scheduler for an agent
 ```js
-    agenty.scheduler.delete("7hy654rfgt")
+    agenty.schedulers.delete(agent_id)
 ```
 
 **Parameter:**

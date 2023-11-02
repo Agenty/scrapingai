@@ -36,13 +36,13 @@
     }
 })
 ```
-**Payload:**
+**Parameters:**
 
-| Name    | Type    | Description                                             |
-| ------- | ------- | ------------------------------------------------------- |
-| name*   | string  | Name of your agent                                      |
-| type*   | enum    | Select one of them(scraping, crawling, changedetection) |
-| config* | Objects | Describe selectors and fields                           |
+| Name    | Type   | Description                                             |
+| ------- | ------ | ------------------------------------------------------- |
+| name*   | string | Name of your agent                                      |
+| type*   | enum   | Select one of them(scraping, crawling, changedetection) |
+| config* | object | Describe selectors and fields                           |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_createAgent)
 **Response:**
@@ -73,9 +73,9 @@
 }
 ```
 
-### Get agent by agent_id
+### Get agent
 ```js
-    agenty.changeDetectionAgents.get("1vu17au9aa")
+    agenty.changeDetectionAgents.get(agent_id)
 ```
 **Parameter:**
 
@@ -122,9 +122,9 @@
 }
 ```
 
-### Update an agent by agent_id
+### Update an agent
 ```js
-    agenty.changeDetectionAgents.update("1vu17au9aa", {
+    agenty.changeDetectionAgents.update(agent_id, {
     name: 'timesofindia.indiatimes.com(Change detection) Update',
     type: 'changedetection',
     config: {
@@ -143,13 +143,13 @@
     input: { data: [], type: 'url' }
 })
 ```
-**Payload:**
+**Parameter:**
 
-| Name    | Type    | Description                                             |
-| ------- | ------- | ------------------------------------------------------- |
-| name*   | string  | Name of your agent                                      |
-| type*   | enum    | Select one of them(scraping, crawling, changedetection) |
-| config* | Objects | Describe selectors and fields                           |
+| Name    | Type   | Description                                             |
+| ------- | ------ | ------------------------------------------------------- |
+| name*   | string | Name of your agent                                      |
+| type*   | enum   | Select one of them(scraping, crawling, changedetection) |
+| config* | object | Describe selectors and fields                           |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_updateAgent)
 **Response:**
@@ -178,9 +178,9 @@
 }
 ```
 
-### Delete an agent by agent_id
+### Delete an agent 
 ```js
-    agenty.crawlingAgents.delete("1vu17au9aa")
+    agenty.changeDetectionAgents.delete(agent_id)
 ```
 
 **Parameter:**

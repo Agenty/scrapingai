@@ -1,7 +1,8 @@
 ## ListRows
+
 ### Add a new row in list
 ```js
-    agenty.listRows.create(2, [
+    agenty.listRows.create(list_id, [
       { 
         field1: "Title-1", 
         field2: "This is a discription"
@@ -23,10 +24,10 @@
 
 **Payload:**
 
-| Name   | Type | Description                                |
-| ------ | ---- | ------------------------------------------ |
-| field1 | any  | Field name must be same as existiing field |
-| field2 | any  | Field name must be same as existiing field |
+| Name   | Type | Description                               |
+| ------ | ---- | ----------------------------------------- |
+| field1 | any  | Field name must be same as existing field |
+| field2 | any  | Field name must be same as existing field |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListRowsController_addRow)
 **Response:**
@@ -50,9 +51,9 @@
 ]
 ```
 
-### Get list rows by list_id
+### Get list rows 
 ```js
-    agenty.listRows.list(2)
+    agenty.listRows.list(list_id)
 ```
 
 **Parameter:**
@@ -85,12 +86,12 @@
 }
 ```
 
-### Get list row by list_id & row_id
+### Get list row
 ```js
-    agenty.listRows.get(2, "65262c3233ed3446a2dbf068")
+    agenty.listRows.get(list_id, row_id)
 ```
 
-**Parameter:**
+**Parameters:**
 
 | Name     | Type   | Description |
 | -------- | ------ | ----------- |
@@ -108,9 +109,9 @@
 ```
 
 
-### Update list row by row_id
+### Update list row 
 ```js
-    agenty.listRows.update(2, "65262c3233ed3446a2dbf068",{
+    agenty.listRows.update(list_id, row_id,{
         field1: "Title-2 Update"
     })
 ```
@@ -144,7 +145,7 @@
     agenty.listRows.delete(2, "65262c3233ed3446a2dbf068")
 ```
 
-**Parameter:**
+**Parameters:**
 
 | Name     | Type   | Description                         |
 | -------- | ------ | ----------------------------------- |
@@ -159,9 +160,9 @@
 }
 ```
 
-### Clear rows by list_id
+### Clear rows
 ```js
-    agenty.listRows.clear(3)
+    agenty.listRows.clear(list_id)
 ```
 
 **Parameter:**

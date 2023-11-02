@@ -9,7 +9,7 @@
 });
 ```
 
-**Payload:**
+**Parameters:**
 
 | Name   | Type   | Description                                                   |
 | ------ | ------ | ------------------------------------------------------------- |
@@ -18,6 +18,7 @@
 | role*  | enum   | Select one of them(Owner, Admin, Manager, Accountant, Viewer) |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Users/operation/UserController_createUser)
+
 **Response:**
 ```json
 {
@@ -33,12 +34,12 @@
 }
 ```
 
-### Get User by user_id
+### Get User
 ```js
-    agenty.users.get(003);
+    agenty.users.get(user_id);
 ```
 
-**Parameters:**
+**Parameter:**
 
 | Name     | Type   | Description         |
 | -------- | ------ | ------------------- |
@@ -92,9 +93,9 @@
 }
 ```
 
-### Update User by user_id
+### Update User
 ```js
-    agenty.users.update(003, {
+    agenty.users.update(user_id, {
         name: "John Doe",
         email: "manan.jain@agenty.com",
         role: "Admin",
@@ -102,7 +103,7 @@
     });
 ```
 
-**Parameters:**
+**Parameter:**
 
 | Name     | Type   | Description            |
 | -------- | ------ | ---------------------- |
@@ -116,12 +117,12 @@
 }
 ```
 
-### Delete User by user_id
+### Delete User
 ```js
-    agenty.users.delete(003);
+    agenty.users.delete(user_id);
 ```
 
-**Parameters:**
+**Parameter:**
 
 | Name     | Type   | Description          |
 | -------- | ------ | -------------------- |

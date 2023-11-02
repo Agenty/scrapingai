@@ -3,7 +3,7 @@ import Api from "./api";
 import Jobs from "./Jobs";
 import { Lists, ListRows } from "./Lists";
 import { Projects, ProjectAgents } from "./Projects";
-import Scheduler from "./Schedulers";
+import Schedulers from "./Schedulers";
 import Users from "./Users";
 import Workflows from "./Workflows";
 
@@ -16,7 +16,7 @@ class Agenty {
   public listRows: ListRows;
   public users: Users;
   public workflows: Workflows;
-  public scheduler: Scheduler;
+  public schedulers: Schedulers;
   public scrapingAgents: ScrapingAgents;
   public crawlingAgents: CrawlingAgents;
   public changeDetectionAgents: ChangeDetectionAgents;
@@ -30,7 +30,7 @@ class Agenty {
     this.listRows = new ListRows(this.api);
     this.users = new Users(this.api);
     this.workflows = new Workflows(this.api);
-    this.scheduler = new Scheduler(this.api);
+    this.schedulers = new Schedulers(this.api);
     this.scrapingAgents = new ScrapingAgents(this.api);
     this.crawlingAgents = new CrawlingAgents(this.api);
     this.changeDetectionAgents = new ChangeDetectionAgents(this.api);

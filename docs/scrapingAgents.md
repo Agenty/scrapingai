@@ -41,13 +41,13 @@
     }
 })
 ```
-**Payload:**
+**Parameters:**
 
-| Name    | Type    | Description                                              |
-| ------- | ------- | -------------------------------------------------------- |
-| name*   | string  | Name of your agent                                       |
-| type*   | enum    | Select one of them(scraping, crawling, Change Detection) |
-| config* | Objects | Describe selectors and fields                            |
+| Name    | Type   | Description                                              |
+| ------- | ------ | -------------------------------------------------------- |
+| name*   | string | Name of your agent                                       |
+| type*   | enum   | Select one of them(scraping, crawling, Change Detection) |
+| config* | object | Describe selectors and fields                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_createAgent)
 **Response:**
@@ -100,9 +100,9 @@
 }
 ```
 
-### Get agent by agent_id
+### Get agent
 ```js
-    agenty.scrapingAgent.get("7edonede87")
+    agenty.scrapingAgents.get(agent_id)
 ```
 **Parameter:**
 
@@ -140,9 +140,9 @@
 }
 ```
 
-### Update an agent by agent_id
+### Update an agent
 ```js
-    agenty.scrapingAgents.update("7edonede87", {
+    agenty.scrapingAgents.update(agent_id, {
     "name": "Scraping Agent Demo Update",
     "type": "scraping",
     "config": {
@@ -187,7 +187,7 @@
 | ------- | ------- | -------------------------------------------------------- |
 | name*   | string  | Name of your agent                                       |
 | type*   | enum    | Select one of them(scraping, crawling, Change Detection) |
-| config* | Objects | Describe selectors and fields                            |
+| config* | objects | Describe selectors and fields                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_updateAgent)
 **Response:**
@@ -240,9 +240,9 @@
 }
 ```
 
-### Delete an agent by agent_id
+### Delete an agent
 ```js
-    agenty.scrapingAgents.delete("7edonede87")
+    agenty.scrapingAgents.delete(agent_id)
 ```
 
 **Parameter:**

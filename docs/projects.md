@@ -7,7 +7,7 @@
         description: "Your description"
     })
 ```
-**Payload:**
+**Parameters:**
 
 | Name        | Type   | Description                |
 | ----------- | ------ | -------------------------- |
@@ -61,9 +61,9 @@
 }
 ```
 
-### Get project by project_id
+### Get project
 ```js
-    agenty.projects.get(1)
+    agenty.projects.get(project_id)
 ```
 
 **Parameter:**
@@ -94,9 +94,9 @@
 }
 ```
 
-### Update project by project_id
+### Update project
 ```js
-    agenty.projects.update(1, {
+    agenty.projects.update(project_id, {
         name: "Project-1",
         description: "Let's change the description of this project"
     })
@@ -104,15 +104,9 @@
 
 **Parameter:**
 
-| Name        | Type   | Description               |
-| ----------- | ------ | ------------------------- |
-| project_id* | number | To update a project by Id |
-
-
-**Payload:**
-
 | Name        | Type   | Description                |
 | ----------- | ------ | -------------------------- |
+| project_id* | number | To update a project by Id  |
 | name*       | string | Name of the project        |
 | description | string | Description of the project |
 
@@ -128,9 +122,9 @@
 }
 ```
 
-### Delete project by project_id
+### Delete project
 ```js
-    agenty.projects.delete(1)
+    agenty.projects.delete(project_id)
 ```
 
 **Parameter:**
@@ -149,8 +143,8 @@
 
 ### Add agent(s) in project
 ```js
-    agenty.projectAgents.create(1, {
-        "agents":[ "4rft6yhgt6", "4rfder56hy" ]
+    agenty.projectAgents.create(project_id, {
+        "agents":[ agent_id, agent_id, ... ]
     })
 ```
 **Payload:**
@@ -170,9 +164,9 @@
 
 ### Remove agent(s) from project
 ```js
-    agenty.projectAgents.delete(2, "4rfder56hy")
+    agenty.projectAgents.delete(project_id, agent_id)
 ```
-**Parameter:**
+**Parameters:**
 
 | Name        | Type   | Description                                       |
 | ----------- | ------ | ------------------------------------------------- |

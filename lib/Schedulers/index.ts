@@ -1,6 +1,7 @@
 import Api from "../api";
+import { Scheduler } from "./types";
 
-class Scheduler {
+class Schedulers {
 
     private api: Api;
     constructor(api: Api) {
@@ -25,4 +26,4 @@ class Scheduler {
 
 }
 
-export default Scheduler;
+export default Schedulers;

@@ -3,16 +3,16 @@
 ### Create a list
 ```js
     agenty.lists.create({
-        name:"List-01",
-        description: "Your description"
+        name: "List-01",
+        description: "the description"
     })
 ```
-**Payload:**
+**Parameters:**
 
-| Name        | Type   | Description              |
-| ----------- | ------ | ------------------------ |
-| name*       | string | Name of your list        |
-| description | string | Description of your list |
+| Name        | Type   | Description             |
+| ----------- | ------ | ----------------------- |
+| name*       | string | Name of the list        |
+| description | string | Description of the list |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListController_createList)
 **Response:**
@@ -59,9 +59,9 @@
 }
 ```
 
-### Get list by list_id
+### Get list 
 ```js
-    agenty.lists.get(1)
+    agenty.lists.get(list_id)
 ```
 
 **Parameter:**
@@ -84,26 +84,20 @@
 }
 ```
 
-### Update list by list_id
+### Update list
 ```js
-    agenty.lists.update(1, {
+    agenty.lists.update(list_id, {
         name: "List-01 Update"
     })
 ```
 
 **Parameter:**
 
-| Name     | Type   | Description                              |
-| -------- | ------ | ---------------------------------------- |
-| list_id* | number | To update a list name, description by Id |
-
-
-**Payload:**
-
-| Name        | Type   | Description              |
-| ----------- | ------ | ------------------------ |
-| name*       | string | Name of your list        |
-| description | string | Description of your list |
+| Name        | Type   | Description                              |
+| ----------- | ------ | ---------------------------------------- |
+| list_id*    | number | To update a list name, description by Id |
+| name*       | string | Name of the list                         |
+| description | string | Description of the list                  |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Lists/operation/ListController_updateList)
 **Response:**
@@ -113,9 +107,9 @@
 }
 ```
 
-### Delete list by list_id
+### Delete list
 ```js
-    agenty.lists.delete(1)
+    agenty.lists.delete(list_id)
 ```
 
 **Parameter:**

@@ -3,15 +3,15 @@
 ### Start an agent job
 ```js 
     agenty.jobs.start({
-        "agent_id":"7hy654rfgt"
+        "agent_id": agent_id
     })
 ```
 
-**Payload:**
+**Parameter:**
 
-| Name          | Type        | Description                                 |
-|---------------|-------------|---------------------------------------------|
-| agent_id*     | string      | ID of an agent                              |
+| Name      | Type   | Description    |
+| --------- | ------ | -------------- |
+| agent_id* | string | ID of an agent |
 
 
 **Response:**
@@ -29,14 +29,14 @@
 
 ### Stop an agent job
 ```js
-    agenty.jobs.stop(19558)
+    agenty.jobs.stop(job_id)
 ```
 
 **Parameter:**
 
-| Name          | Type        | Description           |
-|---------------|-------------|-----------------------|
-| job_id*       | number      | ID of an agent job    |
+| Name    | Type   | Description        |
+| ------- | ------ | ------------------ |
+| job_id* | number | ID of an agent job |
 
 
 **Response:**
@@ -105,15 +105,15 @@
 }
 ```
 
-### Get job by job_id
+### Get job
 ```js
-    agenty.jobs.get(19418)
+    agenty.jobs.get(job_id)
 ```
 **Parameter:**
 
-| Name          | Type        | Description           |
-|---------------|-------------|-----------------------|
-| job_id*       | number      | ID of an agent job    |
+| Name    | Type   | Description        |
+| ------- | ------ | ------------------ |
+| job_id* | number | ID of an agent job |
 
 **Response:**
 ```json
@@ -142,15 +142,15 @@
     }
 ```
 
-### Get job result by job_id
+### Get job result
 ```js
-    agenty.jobs.result(19541)
+    agenty.jobs.result(job_id)
 ```
 **Parameter:**
 
-| Name          | Type        | Description           |
-|---------------|-------------|-----------------------|
-| job_id*       | number      | ID of an agent job    |
+| Name    | Type   | Description        |
+| ------- | ------ | ------------------ |
+| job_id* | number | ID of an agent job |
 
 **Response:**
 ```json

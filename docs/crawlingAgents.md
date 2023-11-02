@@ -55,13 +55,13 @@
     }
 })
 ```
-**Payload:**
+**Parameters:**
 
-| Name    | Type    | Description                                             |
-| ------- | ------- | ------------------------------------------------------- |
-| name*   | string  | Name of your agent                                      |
-| type*   | enum    | Select one of them(scraping, crawling, changedetection) |
-| config* | Objects | Describe selectors and fields                           |
+| Name    | Type   | Description                                             |
+| ------- | ------ | ------------------------------------------------------- |
+| name*   | string | Name of your agent                                      |
+| type*   | enum   | Select one of them(scraping, crawling, changedetection) |
+| config* | object | Describe selectors and fields                           |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_createAgent)
 **Response:**
@@ -120,9 +120,9 @@
 }
 ```
 
-### Get agent by agent_id
+### Get agent
 ```js
-    agenty.crawlingAgents.get("t8blylf7zz")
+    agenty.crawlingAgents.get(agent_id)
 ```
 **Parameter:**
 
@@ -133,7 +133,7 @@
 **Response:**
 ```json
 {
-  "agent_id": "t8blylf7zz",
+  "agent_id": "7edonede87",
   "account_id": 001,
   "user_id": 002,
   "project_id": null,
@@ -144,7 +144,40 @@
   "version": 7,
   "config": {
     "url": "https://sandbox.agenty.com/product",
-    "collections": [ [Object] ],
+    "collections": [
+      {
+        "name": "Collection1",
+        "fields": [
+          {
+            "from": "url",
+            "join": false,
+            "name": "url",
+            "type": "DEFAULT",
+            "extract": "TEXT",
+            "selector": "",
+            "post_processing": []
+          },
+          {
+            "from": null,
+            "join": false,
+            "name": "title",
+            "type": "CSS",
+            "extract": "TEXT",
+            "selector": "h5.text-uppercase",
+            "attribute": null
+          },
+          {
+            "from": null,
+            "join": false,
+            "name": "price",
+            "type": "CSS",
+            "extract": "TEXT",
+            "selector": ".price .act-price",
+            "attribute": null
+          }
+        ]
+      } 
+    ],
     "crawl_rules": [ "https://sandbox.agenty.com/product-detail/([0-9]+)" ],
     "process_rules": [ "https://sandbox.agenty.com/product-detail/([0-9]+)" ],
     "priority_rules": [ "" ]
@@ -164,9 +197,9 @@
 ```
 
 
-### Update an agent by agent_id
+### Update an agent
 ```js
-    agenty.crawlingAgents.update("t8blylf7zz", {
+    agenty.crawlingAgents.update(agent_id, {
         "name": "Crawling Agent Demo Update",
         "type": "crawling",
         "config": {
@@ -221,13 +254,14 @@
 ```
 **Payload:**
 
-| Name    | Type    | Description                                             |
-| ------- | ------- | ------------------------------------------------------- |
-| name*   | string  | Name of your agent                                      |
-| type*   | enum    | Select one of them(scraping, crawling, changedetection) |
-| config* | Objects | Describe selectors and fields                           |
+| Name    | Type   | Description                                             |
+| ------- | ------ | ------------------------------------------------------- |
+| name*   | string | Name of your agent                                      |
+| type*   | enum   | Select one of them(scraping, crawling, changedetection) |
+| config* | object | Describe selectors and fields                           |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Agents/operation/AgentsController_updateAgent)
+
 **Response:**
 ```json
 {
@@ -235,7 +269,41 @@
   "type": "crawling",
   "config": {
     "url": "https://sandbox.agenty.com/product",
-    "collections": [ [Object] ],
+    "collections": [  
+      {
+        "name": "Collection1",
+        "fields": [
+          {
+            "from": "url",
+            "join": false,
+            "name": "url",
+            "type": "DEFAULT",
+            "extract": "TEXT",
+            "selector": "",
+            "post_processing": []
+          },
+          {
+            "from": null,
+            "join": false,
+            "name": "title",
+            "type": "CSS",
+            "extract": "TEXT",
+            "selector": "h5.text-uppercase",
+            "attribute": null
+          },
+          {
+            "from": null,
+            "join": false,
+            "name": "price",
+            "type": "CSS",
+            "extract": "TEXT",
+            "selector": ".price .act-price",
+            "attribute": null
+          },
+          ...
+        ]
+      } 
+    ],
     "crawl_rules": [ "https://sandbox.agenty.com/product-detail/([0-9]+)" ],
     "process_rules": [ "https://sandbox.agenty.com/product-detail/([0-9]+)" ],
     "priority_rules": [ "" ]
@@ -245,9 +313,9 @@
 }
 ```
 
-### Delete an agent by agent_id
+### Delete an agent 
 ```js
-    agenty.crawlingAgents.delete("t8blylf7zz")
+    agenty.crawlingAgents.delete(agent_id)
 ```
 
 **Parameter:**
@@ -260,5 +328,5 @@
 **Response:**
 ```json
 {
-  "message": "1 agent with id: t8blylf7zz deleted successfully"
+  "message": "1 agent with id: 7edonede87 deleted successfully"
 }

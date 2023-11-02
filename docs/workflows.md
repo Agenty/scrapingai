@@ -27,7 +27,7 @@
         ]
 })
 ```
-**Payload:**
+**Parameters:**
 
 | Name     | Type                              | Description                                   |
 | -------- | --------------------------------- | --------------------------------------------- |
@@ -37,10 +37,11 @@
 | actions* | Array of objects (WorkflowAction) | Mention the action                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Workflows/operation/WorkflowController_createWorkflow)
+
 **Response:**
 ```json
 {
-  "agents": { "all": false, "selected": [ "7hy654rfgt" ] },
+  "agents": { "all": false, "selected": [ agent_id ] },
   "name": "Workflow Demo",
   "trigger": { "when": [ "job_completed", "job_error" ] },
   "actions": [ { "type": "email", "config": [Object] } ],
@@ -97,9 +98,9 @@
 }
 ```
 
-### Get workflow by workflow_id
+### Get workflow
 ```js
-    agenty.workflows.get("65267d8733013demo2dbf0f2")
+    agenty.workflows.get(workflow_id)
 ```
 **Parameter:**
 
@@ -123,9 +124,9 @@
 }
 ```
 
-### Update workflow by workflow_id
+### Update workflow
 ```js
-    agenty.workflows.update("65267d8733013demo2dbf0f2", {
+    agenty.workflows.update(workflow_id, {
         "account_id": 001,
         "user_id": 002,
         "agents": {
@@ -157,22 +158,18 @@
 })
 ```
 
-**Parameter:**
+**Parameters:**
 
-| Name         | Type   | Description                       |
-| ------------ | ------ | --------------------------------- |
-| workflow_id* | string | To update workflow by workflow_id |
-
-**Payload:**
-
-| Name     | Type                              | Description                                   |
-| -------- | --------------------------------- | --------------------------------------------- |
-| agents*  | object (WorkflowAgents)           | Select the agent you want to create  workflow |
-| name*    | string                            | Name of your workflow                         |
-| trigger* | object (WorkflowTrigger)          | Mention the trigger                           |
-| actions* | Array of objects (WorkflowAction) | Mention the action                            |
+| Name         | Type                              | Description                                   |
+| ------------ | --------------------------------- | --------------------------------------------- |
+| workflow_id* | string                            | To update workflow by workflow_id             |
+| agents*      | object (WorkflowAgents)           | Select the agent you want to create  workflow |
+| name*        | string                            | Name of your workflow                         |
+| trigger*     | object (WorkflowTrigger)          | Mention the trigger                           |
+| actions*     | Array of objects (WorkflowAction) | Mention the action                            |
 
 [For complete reference click here](https://agenty.com/docs/api#tag/Workflows/operation/WorkflowController_updateWorkflowById)
+
 **Response:**
 ```json
 {
@@ -180,8 +177,19 @@
   "user_id": 566,
   "agents": { "all": false, "selected": [ "huhwk5t9ml" ] },
   "name": "Workflow Demo Update",
-  "trigger": { "when": [ "job_completed", "job_error" ] },
-  "actions": [ { "type": "email", "config": [Object] } ],
+  "trigger": { 
+    "when": [ 
+        "job_completed", "job_error" 
+        ] 
+    },
+  "actions": [ 
+    { "type": "email", 
+    "config": {
+                "emails": "john.doe@agenty.com",
+                "attach_result": null
+              } 
+    } 
+    ],
   "is_enabled": true,
   "created_at": "2023-10-11T10:48:39.603Z",
   "updated_at": "2023-10-11T11:22:47.532Z",
@@ -191,23 +199,17 @@
 
 ### Enable or disable a workflow
 ```js
-    agenty.workflows.isEnabled("65267d8733013d46a2dbf0f2", {
+    agenty.workflows.isEnabled(workflow_id, {
         "is_enabled": true,
 })
 ```
 
-**Parameter:**
+**Parameters:**
 
-| Name         | Type   | Description                     |
-| ------------ | ------ | ------------------------------- |
-| workflow_id* | string | To enable or disable a workflow |
-
-**Payload:**
-
-| Name        | Type    | Description                 |
-| ----------- | ------- | --------------------------- |
-| is_enabled* | boolean | Enable or disable a worflow |
-
+| Name         | Type    | Description                     |
+| ------------ | ------- | ------------------------------- |
+| workflow_id* | string  | To enable or disable a workflow |
+| is_enabled*  | boolean | Enable or disable a worflow     |
 
 **Response:**
 ```json
@@ -216,16 +218,16 @@
 }
 ```
 
-### Delete workflow by workflow_id
+### Delete workflow
 ```js
-    agenty.workflows.delete("65267d8733013demo2dbf0f2")
+    agenty.workflows.delete(workflow_id)
 ```
 
 **Parameter:**
 
-| Name          | Type   | Description                           |
-| ------------- | ------ | ------------------------------------- |
-| workflows_id* | number | To delete the workflow by workflow_id |
+| Name         | Type   | Description                           |
+| ------------ | ------ | ------------------------------------- |
+| workflow_id* | number | To delete the workflow by workflow_id |
 
 
 **Response:**

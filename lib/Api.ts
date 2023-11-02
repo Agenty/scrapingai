@@ -2,7 +2,7 @@ import axios from "axios";
 
 class Api {
     private baseUrl: string = "https://api.agenty.in/v2";
-    // private baseUrl: string = "http://localhost:5000/v2";
+
     private apiKey: string;
 
     constructor(apiKey: string) {
