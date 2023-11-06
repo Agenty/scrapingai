@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Agenty/agenty.git"
+    "url": "git+https://github.com/Agenty/scrapingai.git"
   },
   "keywords": [
     "scraping",
@@ -31,12 +31,13 @@
     "data scraping",
     "url scraping",
     "web crawling",
-    "agenty"
+    "agenty",
+    "webscraper"
   ],
   "author": "https://github.com/vickyRathee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Agenty/agenty/issues"
+    "url": "https://github.com/Agenty/scrapingai/issues"
   },
   "homepage": "https://agenty.com/",
   "dependencies": {
