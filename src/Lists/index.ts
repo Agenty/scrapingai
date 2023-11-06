@@ -1,4 +1,3 @@
-import { Paged } from "../../models/paged";
 import Api from "../api";
 import { List } from "./types";
 
@@ -9,8 +8,8 @@ class Lists {
     this.api = api;
   }
 
-  async list(paged?: Paged): Promise<List[]> {
-    return this.api.get(`/lists`, paged);
+  async list(params: any = undefined): Promise<List[]> {
+    return this.api.get(`/lists`, params);
   }
 
   async get(list_id: number): Promise<List> {

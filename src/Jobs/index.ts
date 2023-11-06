@@ -1,4 +1,3 @@
-import { Paged } from "../../models/paged";
 import Api from "../api";
 import { Job } from "./types";
 
@@ -13,8 +12,8 @@ class Jobs {
     return this.api.get(`/jobs/${job_id}`);
   }
 
-  async list(paged?: Paged): Promise<Job[]> {
-    return this.api.get(`/jobs`, paged);
+  async list(params: any = undefined): Promise<Job[]> {
+    return this.api.get(`/jobs`, params);
   }
 
   async start(agent_id: string): Promise<Job> {

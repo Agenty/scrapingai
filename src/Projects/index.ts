@@ -1,4 +1,3 @@
-import { Paged } from "../../models/paged";
 import Api from "../api";
 import { Project } from "./types";
 
@@ -13,8 +12,8 @@ class Projects {
     return this.api.get(`/projects/${project_id}`);
   }
 
-  async list(paged?: Paged): Promise<Project> {
-    return this.api.get(`/projects`, paged);
+  async list(params: any = undefined): Promise<Project> {
+    return this.api.get(`/projects`, params);
   }
 
   async create(project: Project): Promise<Project> {
