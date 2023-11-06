@@ -9,6 +9,7 @@ import { Projects, ProjectAgents } from "./Projects";
 import Schedulers from "./Schedulers";
 import Users from "./Users";
 import Workflows from "./Workflows";
+import Api from "./api";
 
 class Agenty {
   private api: Api;
