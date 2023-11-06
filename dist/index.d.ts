@@ -5,6 +5,7 @@ import { Projects, ProjectAgents } from "./Projects";
 import Schedulers from "./Schedulers";
 import Users from "./Users";
 import Workflows from "./Workflows";
+import Browser from "./browser";
 declare class Agenty {
     private api;
     jobs: Jobs;
@@ -18,6 +19,7 @@ declare class Agenty {
     changeDetectionAgents: ChangeDetectionAgents;
     projects: Projects;
     projectAgents: ProjectAgents;
+    browser: Browser;
     constructor(apiKey: string);
 }
 export default Agenty;

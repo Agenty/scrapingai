@@ -1,6 +1,6 @@
 {
   "name": "scrapingai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build web scraping agents using AI to auto-extract the data from websites",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
