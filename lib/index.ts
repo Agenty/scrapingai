@@ -1,4 +1,8 @@
-import { ChangeDetectionAgents, CrawlingAgents, ScrapingAgents } from "./Agents";
+import {
+  ChangeDetectionAgents,
+  CrawlingAgents,
+  ScrapingAgents,
+} from "./Agents";
 import Api from "./api";
 import Jobs from "./Jobs";
 import { Lists, ListRows } from "./Lists";
@@ -7,9 +11,7 @@ import Schedulers from "./Schedulers";
 import Users from "./Users";
 import Workflows from "./Workflows";
 
-
 class Agenty {
-
   private api: Api;
   public jobs: Jobs;
   public lists: Lists;

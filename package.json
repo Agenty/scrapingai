@@ -1,6 +1,6 @@
 {
-  "name": "agenty",
-  "version": "0.0.1",
+  "name": "scrapingai",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "dev": "ts-node-dev test.ts"
@@ -10,9 +10,14 @@
     "url": "git+https://github.com/Agenty/agenty.git"
   },
   "keywords": [
+    "scraping",
+    "crawling",
+    "scraping api",
     "web scraping",
     "data scraping",
-    "url scraping"
+    "url scraping",
+    "web crawling",
+    "agenty"
   ],
   "author": "https://github.com/vickyRathee",
   "license": "MIT",
@@ -21,13 +26,13 @@
   },
   "homepage": "https://agenty.com/",
   "dependencies": {
-    "axios": "^1.5.1",
-    "dotenv": "^16.3.1"
+    "axios": "^1.5.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.3",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "dotenv": "^16.3.1"
   }
 }
