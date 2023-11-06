@@ -10,6 +10,7 @@ import Schedulers from "./Schedulers";
 import Users from "./Users";
 import Workflows from "./Workflows";
 import Api from "./api";
+import Browser from "./browser";
 
 class Agenty {
   private api: Api;
@@ -24,6 +25,7 @@ class Agenty {
   public changeDetectionAgents: ChangeDetectionAgents;
   public projects: Projects;
   public projectAgents: ProjectAgents;
+  public browser: Browser;
 
   constructor(apiKey: string) {
     this.api = new Api(apiKey);
@@ -38,6 +40,7 @@ class Agenty {
     this.changeDetectionAgents = new ChangeDetectionAgents(this.api);
     this.projects = new Projects(this.api);
     this.projectAgents = new ProjectAgents(this.api);
+    this.browser = new Browser(this.api);
   }
 }
 
