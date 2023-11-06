@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "npx playwright test"
+    "dev": "ts-node-dev test.ts"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,13 @@
   },
   "homepage": "https://agenty.com/",
   "dependencies": {
-    "axios": "^1.5.1"
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.8.3"
+    "@types/node": "^20.8.3",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
   }
 }
