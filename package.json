@@ -1,10 +1,24 @@
 {
   "name": "scrapingai",
   "version": "1.0.0",
-  "description": "",
+  "description": "Build web scraping agents using AI to auto-extract the data from websites",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "ts-node-dev test.ts"
+    "build": "rimraf ./dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "dev": "ts-node-dev lib/index.ts",
+    "test": "npx playwright test",
+    "dev-test": "ts-node-dev lib/test.ts"
   },
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Agenty/agenty.git"
@@ -29,10 +43,13 @@
     "axios": "^1.5.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.38.1",
     "@types/node": "^20.8.3",
+    "dotenv": "^16.3.1",
+    "microbundle": "^0.15.1",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.2.2",
-    "dotenv": "^16.3.1"
+    "typescript": "^5.2.2"
   }
 }
