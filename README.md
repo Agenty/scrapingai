@@ -1,7 +1,7 @@
 # scarapingai
 
-[![version](https://img.shields.io/npm/v/scarapingai.svg)](https://www.npmjs.com/package/scarapingai)
-[![license](https://img.shields.io/npm/l/scarapingai.svg)](https://www.npmjs.com/package/scarapingai)
+[![version](https://img.shields.io/npm/v/scrapingai.svg)](https://www.npmjs.com/package/scrapingai)
+[![license](https://img.shields.io/npm/l/scrapingai.svg)](https://www.npmjs.com/package/scrapingai)
 
 > Extract data from websites automatically with AI or build [web scraping agents](https://agenty.com/products/scraping-agent) for bulk URL scraping.
 
