@@ -2,9 +2,7 @@
 
 ### Start an agent job
 ```js 
-    agenty.jobs.start({
-        "agent_id": agent_id
-    })
+    agenty.jobs.start(agent_id)
 ```
 
 **Parameter:**
@@ -101,7 +99,7 @@
       "ping_at": null
     },
     ...
-    ]
+  ]
 }
 ```
 

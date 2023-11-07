@@ -111,7 +111,7 @@
 
 ### Update list row 
 ```js
-    agenty.listRows.update(list_id, row_id,{
+    agenty.listRows.update(list_id, row_id, {
         field1: "Title-2 Update"
     })
 ```
@@ -142,7 +142,7 @@
 
 ### Delete list row by row_id
 ```js
-    agenty.listRows.delete(2, "65262c3233ed3446a2dbf068")
+    agenty.listRows.delete(list_id, row_id)
 ```
 
 **Parameters:**
