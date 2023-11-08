@@ -5,6 +5,8 @@
 
 > Extract data from websites automatically with AI or build [web scraping agents](https://agenty.com/products/scraping-agent) for bulk URL scraping.
 
+[!Auto extract website data with AI](/assets/auto-extract-api.png)
+
 ## Installation
 
 Install it via npm:
